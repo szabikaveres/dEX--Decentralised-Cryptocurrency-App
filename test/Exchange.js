@@ -14,8 +14,8 @@ describe('Exchange', () => {
     const Exchange = await ethers.getContractFactory('Exchange')
     const Token = await ethers.getContractFactory('Token')
 
-    token1 = await Token.deploy('Dapp University', 'DAPP', '1000000')
-    token2 = await Token.deploy('Mock Dai', 'mDAI', '1000000')
+    token1 = await Token.deploy('Decentralised Exchange', 'dEX', '1000000')
+    token2 = await Token.deploy('Mock Bitcoin', 'mBTC', '1000000')
 
     accounts = await ethers.getSigners()
     deployer = accounts[0]
