@@ -12,9 +12,9 @@ async function main() {
     console.log('Accounts fetched:\n${accounts[0].address}\n${accounts[1].address}\n')
 
     //Deploy contracts  Migration Script
-    const dEX = await Token.deploy('Decentralised Exchange', 'dEX', '1000000')
-    await dEX.deployed()
-    console.log('dEX deployed to: ${dEX.address}')
+    const dex = await Token.deploy('Decentralised Exchange', 'dEX', '1000000')
+    await dex.deployed()
+    console.log('dEX deployed to: ${dex.address}')
 
     const mETH = await Token.deploy('mETH', 'mETH', '1000000')
     await mETH.deployed()
