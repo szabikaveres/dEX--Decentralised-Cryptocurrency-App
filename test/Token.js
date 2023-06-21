@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { ethers } = require('hardhat');
+const { ethers } = require('hardhat'); //This is Hardhat ethers library, special type
 
 const tokens = (n) => {
   return ethers.utils.parseUnits(n.toString(), 'ether')
