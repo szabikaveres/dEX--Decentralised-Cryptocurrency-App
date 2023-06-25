@@ -12,9 +12,8 @@ import {
 } from '../store/interactions';
 
 import Navbar from './Navbar'
-import Markets from './Markets';
-import Balance from './Balance';
-
+import Markets from './Markets'
+import Balance from './Balance'
 
 function App() {
   const dispatch = useDispatch()
@@ -23,7 +22,7 @@ function App() {
     // Connect Ethers to blockchain
     const provider = loadProvider(dispatch)
 
-    // Fetch current network's chainId (e.g. hardhat: 31337, sepolia:11155111)
+    // Fetch current network's chainId (e.g. hardhat: 31337, sepolia 11155111)
     const chainId = await loadNetwork(provider, dispatch)
 
     // Reload page when network changes
@@ -45,7 +44,7 @@ function App() {
     const exchangeConfig = config[chainId].exchange
     const exchange = await loadExchange(provider, exchangeConfig.address, dispatch)
 
-      //Listen to events
+    // Listen to events
     subscribeToEvents(exchange, dispatch)
   }
 
@@ -61,9 +60,9 @@ function App() {
       <main className='exchange grid'>
         <section className='exchange__section--left grid'>
 
-        <Markets />
+          <Markets />
 
-        <Balance />
+          <Balance />
 
           {/* Order */}
 
@@ -88,4 +87,3 @@ function App() {
 }
 
 export default App;
-
