@@ -76,6 +76,12 @@ const DEFAULT_EXCHANGE_STATE = {
     loaded: false,
     data: []
   },
+  cancelledOrders: {
+    data: []
+  },
+  filledOrders: {
+    data: []
+  },
   events: []
 }
 
@@ -89,6 +95,124 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
         loaded: true,
         contract: action.exchange
       }
+
+    // ------------------------------------------------------------------------------
+    // ORDERS LOADED (CANCELLED, FILLED & ALL)
+
+    // case 'CANCELLED_ORDERS_LOADED':
+    //   return {
+    //     ...state,
+    //     cancelledOrders: {
+    //       loaded: true,
+    //       data: action.cancelledOrders
+    //     }
+    //   }
+
+    // case 'FILLED_ORDERS_LOADED':
+    //   return {
+    //     ...state,
+    //     filledOrders: {
+    //       loaded: true,
+    //       data: action.filledOrders
+    //     }
+    //   }
+
+    case 'ALL_ORDERS_LOADED':
+      return {
+        ...state,
+        allOrders: {
+          loaded: true,
+          data: action.allOrders
+        }
+      }
+
+    // // ------------------------------------------------------------------------------
+    // // CANCELLING ORDERS
+    // case 'ORDER_CANCEL_REQUEST':
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: 'Cancel',
+    //       isPending: true,
+    //       isSuccessful: false
+    //     }
+    //   }
+
+    // case 'ORDER_CANCEL_SUCCESS':
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: 'Cancel',
+    //       isPending: false,
+    //       isSuccessful: true
+    //     },
+    //     cancelledOrders: {
+    //       ...state.cancelledOrders,
+    //       data: [
+    //         ...state.cancelledOrders.data,
+    //         action.order
+    //       ]
+    //     },
+    //     events: [action.event, ...state.events]
+    //   }
+
+    // case 'ORDER_CANCEL_FAIL':
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: 'Cancel',
+    //       isPending: false,
+    //       isSuccessful: false,
+    //       isError: true
+    //     }
+    //   }
+
+    // // ------------------------------------------------------------------------------
+    // // FILLING ORDERS
+    // case 'ORDER_FILL_REQUEST':
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: "Fill Order",
+    //       isPending: true,
+    //       isSuccessful: false
+    //     }
+    //   }
+
+    // case 'ORDER_FILL_SUCCESS':
+    //   // Prevent duplicate orders
+    //   index = state.filledOrders.data.findIndex(order => order.id.toString() === action.order.id.toString())
+
+    //   if (index === -1) {
+    //     data = [...state.filledOrders.data, action.order]
+    //   } else {
+    //     data = state.filledOrders.data
+    //   }
+
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: "Fill Order",
+    //       isPending: false,
+    //       isSuccessful: true
+    //     },
+    //     filledOrders: {
+    //       ...state.filledOrders,
+    //       data
+    //     },
+    //     events: [action.event, ...state.events]
+    //   }
+
+    // case 'ORDER_FILL_FAIL':
+    //   return {
+    //     ...state,
+    //     transaction: {
+    //       transactionType: "Fill Order",
+    //       isPending: false,
+    //       isSuccessful: false,
+    //       isError: true
+    //     }
+    //   }
 
     // ------------------------------------------------------------------------------
     // BALANCE CASES
@@ -108,7 +232,7 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
     case 'TRANSFER_REQUEST':
       return {
         ...state,
-        trasnsaction: {
+        transaction: {
           transactionType: 'Transfer',
           isPending: true,
           isSuccessful: false
@@ -134,7 +258,6 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
           isPending: false,
           isSuccessful: false,
           isError: true
-
         },
         transferInProgress: false
       }
@@ -154,7 +277,7 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
 
     case 'NEW_ORDER_SUCCESS':
       // Prevent duplicate orders
-      index = state.allOrders.data.findIndex(order => order.id === action.order.id)
+      index = state.allOrders.data.findIndex(order => order.id.toString() === action.order.id.toString())
 
       if(index === -1) {
         data = [...state.allOrders.data, action.order]

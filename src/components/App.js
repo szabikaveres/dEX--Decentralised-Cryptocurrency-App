@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import config from '../config.json';
 
+
 import {
   loadProvider,
   loadNetwork,
@@ -23,7 +24,7 @@ function App() {
     // Connect Ethers to blockchain
     const provider = loadProvider(dispatch)
 
-    // Fetch current network's chainId (e.g. hardhat: 31337, sepolia 11155111)
+    // Fetch current network's chainId (e.g. hardhat: 31337, Sepolia 11155111)
     const chainId = await loadNetwork(provider, dispatch)
 
     // Reload page when network changes
