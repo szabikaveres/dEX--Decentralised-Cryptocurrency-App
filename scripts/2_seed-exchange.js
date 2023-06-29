@@ -60,14 +60,13 @@ async function main() {
     await transaction.wait()
     console.log(`Approved ${amount} tokens from ${user2.address}`)
 
-        // User 2 Deposits mETH
-        transaction = await exchange.connect(user2).depositToken(mETH.address, amount)
-        await transaction.wait()
-        console.log(`Deposited ${amount} tokens from ${user2.address}\n`)
+    // User 2 Deposits mETH
+    transaction = await exchange.connect(user2).depositToken(mETH.address, amount)
+    await transaction.wait()
+    console.log(`Deposited ${amount} tokens from ${user2.address}\n`)
 
 /////////////////////////////////////////////////////////////
 // Seed a Cancelled Order
-//
 
 // User 1 makes order to get tokens
     let orderId
@@ -86,7 +85,6 @@ async function main() {
 
 /////////////////////////////////////////////////////////////
 // Seed Filled Orders
-//
 
 // User 1 makes order
     transaction = await exchange.connect(user1).makeOrder(mETH.address, tokens(100), dEX.address, tokens(10))
@@ -132,7 +130,6 @@ async function main() {
 
 /////////////////////////////////////////////////////////////
 // Seed Open Orders
-//
 
 // User 1 makes 10 orders
 for(let i = 1; i <= 10; i++) {
