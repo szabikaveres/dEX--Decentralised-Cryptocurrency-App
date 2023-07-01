@@ -15,7 +15,19 @@
       "explorerURL": "#"
     },
 
-    "1115511": {
+    "11155111": {
+      "exchange": {
+        "address": "0x82a20b4fCD2A3dDCB50222b9BdF1e259A7289395"
+      },
+      "dEX": {
+        "address": "0x7f420F114a5bf6a0C3baBbcCdC2320a913018732"
+      },
+      "mETH": {
+        "address": "0x863053982547BC90023BF9Ca10085574b1F21D80"
+      },
+      "mBTC": {
+        "address": "0x72e8ECb87ba296D55568e9aEf3f4fC63aa24DA7c"
+      },
       "explorerURL": "https://sepolia.etherscan.io/"
     }
 } 

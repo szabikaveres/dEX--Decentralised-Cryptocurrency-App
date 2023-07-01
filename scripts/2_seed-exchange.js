@@ -18,13 +18,13 @@ async function main() {
 
     // Fetch deployed tokens
     const dEX = await ethers.getContractAt('Token', config[chainId].dEX.address)
-    console.log(`Dapp Token fetched: ${dEX.address}\n`)
+    console.log(`dEX Token fetched: ${dEX.address}\n`)
 
     const mETH = await ethers.getContractAt('Token', config[chainId].mETH.address)
     console.log(`mETH Token fetched: ${mETH.address}\n`)
 
     const mBTC = await ethers.getContractAt('Token', config[chainId].mBTC.address)
-    console.log(`mDAI Token fetched: ${mBTC.address}\n`)
+    console.log(`mBTC Token fetched: ${mBTC.address}\n`)
 
     // Fetch the deployed exchange
     const exchange = await ethers.getContractAt('Exchange', config[chainId].exchange.address)
