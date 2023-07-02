@@ -52,16 +52,6 @@ export const loadExchange = async (provider, address, dispatch) => {
 }
 
 export const subscribeToEvents = (exchange, dispatch) => {
-  exchange.on('Cancel', (id, user, tokenGet, amountGet, tokenGive, amountGive, timestamp, event) => {
-    const order = event.args
-    dispatch({ type: 'ORDER_CANCEL_SUCCESS', order, event })
-  })
-
-  exchange.on('Trade', (id, user, tokenGet, amountGet, tokenGive, amountGive, creator, timestamp, event) => {
-    const order = event.args
-    dispatch({ type: 'ORDER_FILL_SUCCESS', order, event })
-  })
-
   exchange.on('Deposit', (token, user, amount, balance, event) => {
     dispatch({ type: 'TRANSFER_SUCCESS', event })
   })
@@ -174,3 +164,6 @@ export const makeSellOrder = async (provider, exchange, tokens, order, dispatch)
     dispatch({ type: 'NEW_ORDER_FAIL' })
   }
 }
+
+//  These functions are used to interact with the blockchain and smart contracts, retrieve data, and perform actions such as loading accounts, balances, orders, and transferring tokens.
+

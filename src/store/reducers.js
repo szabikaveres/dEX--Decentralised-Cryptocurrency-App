@@ -205,3 +205,5 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
         return state
   }
 }
+
+//the reducers component handles the state management of the application. It defines how the application's state should be updated in response to different actions.

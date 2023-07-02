@@ -161,3 +161,5 @@ main()
   console.error(error);
   process.exit(1);
 });
+
+//This script, is used to seed an exchange with initial data for testing purposes.

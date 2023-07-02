@@ -169,3 +169,5 @@ describe('Token', () => {
   })
 
 })
+
+// The purpose of this script is to ensure that the Token contract behaves correctly and meets the specified requirements.

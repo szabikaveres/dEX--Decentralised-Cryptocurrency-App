@@ -233,7 +233,7 @@ describe('Exchange', () => {
           result = await transaction.wait()
         })
 
-        it('updates canceled orders', async () => {
+        it('updates cancelled orders', async () => {
           expect(await exchange.orderCancelled(1)).to.equal(true)
         })
 
@@ -270,7 +270,7 @@ describe('Exchange', () => {
           await expect(exchange.connect(user1).cancelOrder(invalidOrderId)).to.be.reverted
         })
 
-        it('rejects unauthorized cancelations', async () => {
+        it('rejects unauthorized cancellations', async () => {
           await expect(exchange.connect(user2).cancelOrder(1)).to.be.reverted
         })
 
@@ -333,7 +333,7 @@ describe('Exchange', () => {
           await expect(exchange.connect(user2).fillOrder(1)).to.be.reverted
         })
 
-        it('Rejects canceled orders', async () => {
+        it('Rejects cancelled orders', async () => {
           transaction = await exchange.connect(user1).cancelOrder(1)
           await transaction.wait()
 
@@ -347,3 +347,5 @@ describe('Exchange', () => {
   })
 
 })
+
+//Provides comprehensive tests for the functionalities of a decentralized exchange contract, covering deployment, token depositing and withdrawal, checking balances, making orders, and performing order actions such as cancellation and filling.
