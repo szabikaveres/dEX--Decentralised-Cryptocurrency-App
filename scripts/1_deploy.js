@@ -29,9 +29,10 @@ async function main() {
 
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
-
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 // deploys the Token and Exchange contracts to the blockchain network, initializes them with certain parameters, and logs the addresses of the deployed contracts.

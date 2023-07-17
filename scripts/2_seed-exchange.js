@@ -8,6 +8,7 @@ const wait = (seconds) => {
     const milliseconds = seconds * 1000
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
+
 async function main() {
     // Fetch accounts from wallet - these are unlocked
     const accounts = await ethers.getSigners()
@@ -65,8 +66,9 @@ async function main() {
     await transaction.wait()
     console.log(`Deposited ${amount} tokens from ${user2.address}\n`)
 
-/////////////////////////////////////////////////////////////
-// Seed a Cancelled Order
+  /////////////////////////////////////////////////////////////
+  // Seed a Cancelled Order
+  //
 
 // User 1 makes order to get tokens
     let orderId
@@ -84,7 +86,8 @@ async function main() {
     await wait(1)
 
 /////////////////////////////////////////////////////////////
-// Seed Filled Orders
+  // Seed Filled Orders
+  //
 
 // User 1 makes order
     transaction = await exchange.connect(user1).makeOrder(mETH.address, tokens(100), dEX.address, tokens(10))
@@ -129,7 +132,8 @@ async function main() {
     await wait(1)
 
 /////////////////////////////////////////////////////////////
-// Seed Open Orders
+  // Seed Open Orders
+  //
 
 // User 1 makes 10 orders
 for(let i = 1; i <= 10; i++) {
@@ -156,10 +160,10 @@ for (let i = 1; i <= 10; i++) {
 }
 
 main()
-.then(() => process.exit(0))
-.catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 
 //This script, is used to seed an exchange with initial data for testing purposes.

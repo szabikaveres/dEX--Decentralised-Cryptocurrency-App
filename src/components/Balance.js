@@ -72,8 +72,6 @@ const Balance = () => {
       transferTokens(provider, exchange, 'Withdraw', token, token2TransferAmount, dispatch)
       setToken2TransferAmount(0)
     }
-
-    console.log("withdrawing tokens...")
   }
 
   useEffect(() => {
@@ -132,7 +130,7 @@ const Balance = () => {
         </div>
 
         <form onSubmit={isDeposit ? (e) => depositHandler(e, tokens[1]) : (e) => withdrawHandler(e, tokens[1])}>
-        <label htmlFor="token0">{symbols && symbols[1]} Amount</label>
+          <label htmlFor="token1">{symbols && symbols[1]} Amount</label>
           <input
             type="text"
             id='token1'
