@@ -10,7 +10,6 @@ What makes this Exchange different from other Cryptocurrency exchanges is that i
 
 In this project I have coded out the smart contracts for the Cryptocurrency Exchange and created a front-end website that talks to those smart contracts, so users can trade Cryptocurrencys in a De-Centralised way.
 
-Please be aware, not all features are fully functional at the moment, and this project to be continued ...
 
 Kind regards, 
 Szabika Veres
