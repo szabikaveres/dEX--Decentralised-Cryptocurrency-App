@@ -11,7 +11,7 @@ What makes this Exchange different from other Cryptocurrency exchanges is that i
 In this project I have coded out the smart contracts for the Cryptocurrency Exchange and created a front-end website that talks to those smart contracts, so users can trade Cryptocurrencys in a De-Centralised way.
 
 
-How It Works:
+#How It Works:
 
 Visit the dEX DApp: [dEX](http://floral-sun-8180.on.fleek.co/)
 
@@ -20,7 +20,7 @@ Please see the Tutorial video:
 
 
 
-Technologies Used
+#Technologies Used
 
 The dEX DApp is built using the following technologies:
 
