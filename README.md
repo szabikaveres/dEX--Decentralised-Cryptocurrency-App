@@ -11,7 +11,8 @@ What makes this Exchange different from other Cryptocurrency exchanges is that i
 In this project I have coded out the smart contracts for the Cryptocurrency Exchange and created a front-end website that talks to those smart contracts, so users can trade Cryptocurrencys in a De-Centralised way.
 
 How It Works:
-Please see below the Tutorial video:
+
+Please see the Tutorial video:
 [bit.ly/dEX-Tutorial](https://www.loom.com/share/adefe26556c74dce9994dc3fe4afeaf2?sid=1d18719d-2953-4d00-aa44-092a0f38114f)
 
 ![image](https://github.com/szabikaveres/dEX--Decentralised-Cryptocurrency-App/assets/114937278/0c5342ac-d264-4c3a-bf0d-d7c6593fe61b)
