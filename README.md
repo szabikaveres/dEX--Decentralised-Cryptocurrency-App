@@ -1,8 +1,8 @@
-Hi and Welcome to my Blockchain Bootcamp Graduation project.
 
 # dEX- De-centralised Cryptocurrency Exchange
 
-In this DApp or De-centralised application, you can trade ERC20 type Cryptocurrencies.
+Welcome to the dEX DApp! This decentralized application allows you to trade ERC20 type Cryptocurrencys in a De-Centralised way.
+
 
 You might have seen advertised or used before traditional Cryptocurrency Exchanges like CoinBase or Binance, which are running on traditional web-servers and they have a back-end database, where you deposit your founds into that Exchange, and they have complete control over it and can be changed at anytime.  
 
@@ -10,6 +10,22 @@ What makes this Exchange different from other Cryptocurrency exchanges is that i
 
 In this project I have coded out the smart contracts for the Cryptocurrency Exchange and created a front-end website that talks to those smart contracts, so users can trade Cryptocurrencys in a De-Centralised way.
 
+How It Works:
+Please see below the Tutorial video:
+bit.ly/dEX-Tutorial
+
+![image](https://github.com/szabikaveres/dEX--Decentralised-Cryptocurrency-App/assets/114937278/0c5342ac-d264-4c3a-bf0d-d7c6593fe61b)
+
+
+Technologies Used
+The dEX DApp is built using the following technologies:
+
+React: A JavaScript library for building user interfaces.
+Solidity: The programming language for writing smart contracts on the Ethereum blockchain.
+Web3 JS: Enables client side app to talk to blockchain.
+Hardhat: A development framework for Ethereum DApps.
+Metamask: Enables browser to talk to blockchain.
+Redux: State management for React.JS
 
 Kind regards, 
 Szabika Veres
