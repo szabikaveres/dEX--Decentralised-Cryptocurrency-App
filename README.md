@@ -12,6 +12,8 @@ In this project I have coded out the smart contracts for the Cryptocurrency Exch
 
 How It Works:
 
+Visit the dEX DApp: [dEX](http://floral-sun-8180.on.fleek.co/)
+
 Please see the Tutorial video:
 [bit.ly/dEX-Tutorial](https://www.loom.com/share/adefe26556c74dce9994dc3fe4afeaf2?sid=1d18719d-2953-4d00-aa44-092a0f38114f)
 
@@ -19,6 +21,7 @@ Please see the Tutorial video:
 
 
 Technologies Used
+
 The dEX DApp is built using the following technologies:
 
 React: A JavaScript library for building user interfaces.
@@ -28,10 +31,10 @@ Hardhat: A development framework for Ethereum DApps.
 Metamask: Enables browser to talk to blockchain.
 Redux: State management for React.JS
 
-Kind regards, 
-Szabika Veres
+This project was developed by Szabika Veres.
 
-https://floral-sun-8180.on.fleek.co/
+LinkedIn: [Szabolcs Veres](https://linkedin.com/in/szabolcsveres)
+
 
 
 
